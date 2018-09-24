@@ -1,0 +1,4 @@
+key: abf2f28a-2894-4320-a376-7c85ad60a82a
+
+pack cmd: nuget pack .\Tanneryd.Chronometry.csproj -Symbols
+push cmd:  nuget push .\Tanneryd.Chronometry.1.1.0-rc1.nupkg -apiKey abf2f28a-2894-4320-a376-7c85ad60a82a -Source https://www.nuget.org/api/v2/package
