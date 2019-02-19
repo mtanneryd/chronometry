@@ -8,9 +8,9 @@
     <owners>Tånneryd IT AB</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>A portable library with DateTime extensions and other time related helper classes.</description>
+    <description>A netstd library with DateTime extensions and other time related helper classes.</description>
     <releaseNotes>First release</releaseNotes>
-    <copyright>Copyright 2017-2018</copyright>
-    <tags>DateTime Extensions Time</tags>
+    <copyright>Copyright 2017-2019</copyright>
+    <tags>DateTime Extensions Time Holidays</tags>
   </metadata>
 </package>

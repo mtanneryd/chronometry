@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright ©  2017-2018 Tånneryd IT AB
+ * Copyright ©  2017-2019 Tånneryd IT AB
  * 
  * This file is part of the nuget package Tanneryd.Chronometry.
  * 
