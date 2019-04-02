@@ -23,7 +23,10 @@ namespace Tanneryd.Chronometry
         Week,
         Month,
         Quarter,
+        HalfYear,
+        Season, // april 1 - september 30 | october 1 to march 31
         Year,
+        Decade,
         Century,
         Millenium,
         Aeon

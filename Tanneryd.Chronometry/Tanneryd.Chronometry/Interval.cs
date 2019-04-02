@@ -37,6 +37,7 @@ namespace Tanneryd.Chronometry
             Stop = stop;
         }
 
+
         /// <summary>
         /// 
         /// </summary>
@@ -52,6 +53,23 @@ namespace Tanneryd.Chronometry
             return b;
         }
         
+        public bool Contains(DateTime selectedDay)
+        {
+            bool b = (Start <= selectedDay &&
+                      Stop >= selectedDay);
+
+            return b;
+        }
+
+        public static bool Contains(DateTime from, DateTime to, DateTime selectedDay)
+        {
+            var interval = new Interval(from, to);
+            bool b = (interval.Start <= selectedDay &&
+                      interval.Stop >= selectedDay);
+
+            return b;
+        }
+
         public Interval Intersect(Interval other)
         {
             var days = Start.DaysUntil(Stop);
@@ -152,6 +170,16 @@ namespace Tanneryd.Chronometry
                         return new Interval { Start = sortedDays.First(), Stop = sortedDays.Last() };
                     }));
             }
+            else if (calendarUnit == CalendarUnit.Decade)
+            {
+                results.AddRange(days
+                    .GroupBy(d => d.Year / 10)
+                    .Select(g =>
+                    {
+                        var sortedDays = g.OrderBy(d => d).ToArray();
+                        return new Interval { Start = sortedDays.First(), Stop = sortedDays.Last() };
+                    }));
+            }
             else if (calendarUnit == CalendarUnit.Century)
             {
                 results.AddRange(days
@@ -178,6 +206,12 @@ namespace Tanneryd.Chronometry
             }
 
             return results;
+        }
+
+        public static IEnumerable<Interval> Slice(DateTime from, DateTime to, CalendarUnit calendarUnit)
+        {
+            var interval = new Interval(from, to);
+            return interval.Slice(calendarUnit);
         }
 
         public DateTime[] Mondays()
