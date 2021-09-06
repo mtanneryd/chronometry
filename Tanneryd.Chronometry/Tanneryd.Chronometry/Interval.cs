@@ -70,6 +70,11 @@ namespace Tanneryd.Chronometry
             return b;
         }
 
+        public bool HasIntersectionWith(Interval other)
+        {
+            return Intersect(other) != null;
+        }
+        
         public Interval Intersect(Interval other)
         {
             var days = Start.DaysUntil(Stop);

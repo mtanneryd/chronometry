@@ -352,7 +352,7 @@ namespace Tanneryd.Chronometry.Tests
         {
             var from = new DateTime(2008,02,01);
             var to = new DateTime(2012,01,31);
-            var numberOfYears = from.YearsUntil(to);
+            var numberOfYears = from.YearsUntil(to).Count();
             Assert.AreEqual(5, numberOfYears);
         }
     }

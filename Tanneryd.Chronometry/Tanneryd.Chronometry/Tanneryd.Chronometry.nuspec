@@ -10,7 +10,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>A netstd library with DateTime extensions and other time related helper classes.</description>
     <releaseNotes>First release</releaseNotes>
-    <copyright>Copyright 2017-2019</copyright>
+    <copyright>Copyright 2017-2021</copyright>
     <tags>DateTime Extensions Time Holidays</tags>
   </metadata>
 </package>
