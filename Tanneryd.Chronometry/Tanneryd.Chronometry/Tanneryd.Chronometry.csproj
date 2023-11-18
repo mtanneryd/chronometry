@@ -1,13 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.2.0</Version>
-    <LangVersion>latestmajor</LangVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Nullable>enable</Nullable>
+		<Authors>Tånneryd IT AB</Authors>
+		<RootNamespace>Tanneryd</RootNamespace>
+		<TargetFrameworks>net6;net48;netstandard2.0;netstandard2.1</TargetFrameworks>
+		<PackageVersion>1.2.0-beta1</PackageVersion>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<EmbedAllSources>True</EmbedAllSources>
+		<LangVersion>latestMajor</LangVersion>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="nuget_api_key.txt" />
-  </ItemGroup>
-
+	<ItemGroup>
+		<None Remove="nuget_api_key.txt" />
+	</ItemGroup>
+	
 </Project>

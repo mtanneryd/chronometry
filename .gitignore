@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
@@ -10,3 +10,6 @@
 /Tanneryd.Chronometry/Tanneryd.Chronometry.Tests/bin
 /Tanneryd.Chronometry/Tanneryd.Chronometry.Tests/obj
 /Tanneryd.Chronometry/Tanneryd.Chronometry/nuget_api_key.txt
+Tanneryd.Chronometry/.idea/
+Tanneryd.Chronometry/Tanneryd.Chronometry/.vs/
+Tanneryd.Chronometry/Tanneryd.Chronometry/nuget_api.txt

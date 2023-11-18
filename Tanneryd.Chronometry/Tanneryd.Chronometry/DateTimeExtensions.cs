@@ -25,6 +25,24 @@ namespace Tanneryd.Chronometry
     {
         public static int[] NumberOfDaysInMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
+        public static bool IsDayLightSavingBegin(this DateTime selectedDay)
+        {
+            var dslBegin = new Interval(new DateTime(selectedDay.Year, 3, 1), new DateTime(selectedDay.Year, 3, 30))
+                .FilterOnDayOfWeek(DayOfWeek.Sunday)
+                .OrderBy(d=>d)
+                .Last();
+            return (selectedDay == dslBegin);
+        }
+
+        public static bool IsDayLightSavingEnd(this DateTime selectedDay)
+        {
+            var dslEnd = new Interval(new DateTime(selectedDay.Year, 10, 1), new DateTime(selectedDay.Year, 10, 31))
+                .FilterOnDayOfWeek(DayOfWeek.Sunday)
+                .OrderBy(d => d)
+                .Last();
+            return (selectedDay == dslEnd);
+        }
+
         public static int QuarterOrdinal(this DateTime self)
         {
             var quarter = ((self.Month - 1) / 3) + 1;
